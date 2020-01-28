@@ -20,12 +20,12 @@ namespace ConsoleApp
             // Count 
             var count = new DateTime(dt.Year , dt.Month, dt.Day);
             var count2 = new DateTime(dt.Year + 1,1,1);
-            double interval = (count2 - count).TotalDays;
+            double oshogatsu = (count2 - count).TotalDays;
 
             // Console
             Console.WriteLine(nengo);
             Console.WriteLine(reiwa + " : " +  reiwa2);
-            Console.WriteLine("来年の1月1日まであと：" +(interval-1) + "日です。");
+            Console.WriteLine("来年の1月1日まであと：" +(oshogatsu - 1) + "日です。");
             Console.WriteLine("日めくりの数え番号：" + ver);
             Console.ReadKey();
         }
