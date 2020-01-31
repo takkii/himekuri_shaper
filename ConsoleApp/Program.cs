@@ -1,13 +1,15 @@
 ﻿using System;
+using System.Threading;
 
 namespace ConsoleApp
 {
-    static class Program
+    public class Himekuri
     {
-        static void Main()
+        public static void Main()
         {
             try
             {
+
                 // 宣言
                 DateTime dt = DateTime.Now;
                 string str = "令和";
