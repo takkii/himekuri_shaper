@@ -10,9 +10,9 @@ namespace ConsoleApp
             {
 
                 // 宣言
-                DateTime dt = DateTime.Now;
-                string str = "令和";
-                string str2 = "R0";
+                var dt = DateTime.Now;
+                const string str = "令和";
+                const string str2 = "R0";
 
                 // 計算
                 var nengo = (dt.Year + "年" + dt.Month + "月" + dt.Day + "日" + " : " + dt.Hour + "時" + dt.Minute + "分" +
@@ -23,12 +23,12 @@ namespace ConsoleApp
                 // 変換 
                 var count = new DateTime(dt.Year, dt.Month, dt.Day);
                 var count2 = new DateTime(dt.Year + 1, 1, 1);
-                double oshogatsu = (count2 - count).TotalDays;
+                var gantan = (count2 - count).TotalDays;
 
                 // 出力
                 Console.WriteLine(nengo);
                 Console.WriteLine(reiwa + " : " + reiwa2);
-                Console.WriteLine("来年の1月1日まであと：" + (oshogatsu - 1) + "日です。");
+                Console.WriteLine("来年の1月1日まであと：" + (gantan - 1) + "日です。");
             }
             catch (Exception e)
             {
@@ -37,7 +37,7 @@ namespace ConsoleApp
             finally
             {
                 // バージョン
-                string ver = "1.0.0";
+                const string ver = "1.0.0";
 
                 // 出力
                 Console.WriteLine("日めくりの数え番号：" + ver);
