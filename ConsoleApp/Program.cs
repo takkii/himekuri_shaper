@@ -33,6 +33,7 @@ namespace ConsoleApp
             catch (Exception e)
             {
                 Console.WriteLine("Log : " + e);
+                Console.ReadKey();
             }
             finally
             {
