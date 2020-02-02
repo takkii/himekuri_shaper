@@ -48,7 +48,7 @@ namespace ConsoleApp
             finally
             {
                 // バージョン
-                const string ver = "1.0.0";
+                const string ver = "1.0.1";
 
                 // 出力
                 Console.WriteLine("日めくりの数え番号：" + ver);
