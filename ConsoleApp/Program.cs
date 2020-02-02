@@ -47,12 +47,22 @@ namespace ConsoleApp
             }
             finally
             {
-                // バージョン
                 const string ver = "1.0.1";
+                const string himekuriShaperVersion = "日めくりの数え番号：" + ver;
 
-                // 出力
-                Console.WriteLine("日めくりの数え番号：" + ver);
-                Console.ReadKey();
+                var listv= new List<string>
+                {
+                    himekuriShaperVersion
+                };
+
+                listv.Sort();
+
+                foreach (var shaper in listv ) 
+                {
+                    // 出力
+                    Console.WriteLine(shaper);
+                    Console.ReadKey();
+                }
             }
         }
     }
