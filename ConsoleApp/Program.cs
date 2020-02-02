@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace ConsoleApp
 {
@@ -8,7 +9,6 @@ namespace ConsoleApp
         {
             try
             {
-
                 // 宣言
                 var dt = DateTime.Now;
                 const string str = "令和";
@@ -25,10 +25,20 @@ namespace ConsoleApp
                 var count2 = new DateTime(dt.Year + 1, 1, 1);
                 var gantan = (count2 - count).TotalDays;
 
-                // 出力
-                Console.WriteLine(nengo);
-                Console.WriteLine(reiwa + " : " + reiwa2);
-                Console.WriteLine("来年の1月1日まであと：" + (gantan - 1) + "日です。");
+                var hagoita = reiwa + " : " + reiwa2;
+                var oshogatsu = "来年の1月1日まであと：" + (gantan - 1) + "日です。";
+
+                var list = new List<string>
+                {
+                    nengo, hagoita, oshogatsu
+                };
+
+                list.Sort();
+
+                foreach (var dateTime in list)
+                {
+                    Console.WriteLine(dateTime);
+                }
             }
             catch (Exception e)
             {
