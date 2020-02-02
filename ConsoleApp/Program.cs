@@ -23,7 +23,7 @@ namespace ConsoleApp
                 var count2 = new DateTime(dt.Year + 1, 1, 1);
                 var gantan = (count2 - count).TotalDays;
 
-                // ソート対象
+                // ソート
                 var nengo = (dt.Year + "年" + dt.Month + "月" + dt.Day + "日" + " : " + dt.Hour + "時" + dt.Minute + "分" +
                              dt.Second + "秒");
                 var hagoita = reiwa + " : " + reiwa2;
