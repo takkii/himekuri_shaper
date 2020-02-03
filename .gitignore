@@ -3,3 +3,10 @@
 ################################################################################
 
 /obj/x86/Debug
+/ConsoleApp.sln.DotSettings.user
+/ConsoleApp.sln
+/ConsoleApp.csproj.user
+/ConsoleApp.csproj
+/bin/Debug
+/.vs/ConsoleApp/v15
+/.gitignore

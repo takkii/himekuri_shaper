@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ConsoleApp
+namespace ConsoleApp.ConsoleApp
 {
     public class Himekuri
     {
@@ -29,33 +29,40 @@ namespace ConsoleApp
                 var hagoita = reiwa + " : " + reiwa2;
                 var oshogatsu = "来年の1月1日まであと：" + (gantan - 1) + "日です。";
 
+                // リスト(順列)
                 var list = new List<string>
                 {
                     nengo, hagoita, oshogatsu
                 };
 
+                // 不安定ソート
                 list.Sort();
 
                 foreach (var dateTime in list)
                 {
+                    // 出力
                     Console.WriteLine(dateTime);
                 }
             }
             catch (Exception e)
             {
+                // 出力
                 Console.WriteLine("Log : " + e);
                 Console.ReadKey();
             }
             finally
             {
+                // 宣言
                 const string ver = "1.0.1";
                 const string himekuriShaperVersion = "日めくりの数え番号：" + ver;
 
+                // リスト(バージョン表示)
                 var listv= new List<string>
                 {
                     himekuriShaperVersion
                 };
 
+                // 不安定ソート
                 listv.Sort();
 
                 foreach (var shaper in listv ) 
