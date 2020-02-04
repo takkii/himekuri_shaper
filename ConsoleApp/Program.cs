@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Reflection;
 
 namespace ConsoleApp
 {
-    public static class Himekuri
+    public class Himekuri
     {
         public static void Main(string[] args)
         {
@@ -29,21 +31,20 @@ namespace ConsoleApp
                 var hagoita = reiwa + " : " + reiwa2;
                 var oshogatsu = "来年の1月1日まであと：" + (gantan - 1) + "日です。";
 
-                // リスト(順列)
-                var list = new List<string>
+                var takoage = new[]
                 {
-                    nengo, hagoita, oshogatsu
+                    new {Name = oshogatsu},
+                    new {Name = hagoita},
+                    new {Name = nengo}
                 };
 
-                // 不安定ソート
-                list.Sort();
-
-                foreach (var dateTime in list)
+                var orderByList = takoage.OrderBy(x => x.Name);
+                foreach (var x in orderByList )
                 {
-                    // 出力
-                    Console.WriteLine(dateTime);
+                    Console.WriteLine(x);
                 }
             }
+
             catch (Exception e)
             {
                 // 出力
@@ -56,21 +57,19 @@ namespace ConsoleApp
                 const string ver = "1.0.1";
                 const string himekuriShaperVersion = "日めくりの数え番号：" + ver;
 
-                // リスト(バージョン表示)
-                var listv= new List<string>
+                var versioner = new[]
                 {
-                    himekuriShaperVersion
+                    new {Version = himekuriShaperVersion}
                 };
 
-                // 不安定ソート
-                listv.Sort();
+                var orderList = versioner.OrderBy(y => y.Version);
 
-                foreach (var shaper in listv ) 
+                foreach (var y in orderList)
+                
                 {
-                    // 出力
-                    Console.WriteLine(shaper);
-                    Console.ReadKey();
+                    Console.WriteLine(y);
                 }
+
             }
         }
     }
