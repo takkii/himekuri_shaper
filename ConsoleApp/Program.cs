@@ -1,11 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Reflection;
 
 namespace ConsoleApp
 {
-    public class Himekuri
+    public static class Himekuri
     {
         public static void Main(string[] args)
         {
