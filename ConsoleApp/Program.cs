@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace ConsoleApp
 {
-    public class Himekuri
+    public static class Himekuri
     {
         public static void Main(string[] args)
         {
