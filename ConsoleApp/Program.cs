@@ -23,12 +23,13 @@ namespace ConsoleApp
                 var count2 = new DateTime(dt.Year + 1, 1, 1);
                 var gantan = (count2 - count).TotalDays;
 
-                // ソート
+                // 参照先
                 var nengo = (dt.Year + "年" + dt.Month + "月" + dt.Day + "日" + " : " + dt.Hour + "時" + dt.Minute + "分" +
                              dt.Second + "秒");
                 var hagoita = reiwa + " : " + reiwa2;
                 var oshogatsu = "来年の1月1日まであと：" + (gantan - 1) + "日です。";
 
+                // 安定ソート
                 var takoage = new[]
                 {
                     new {Name = oshogatsu},
@@ -55,6 +56,7 @@ namespace ConsoleApp
                 const string ver = "1.0.1";
                 const string himekuriShaperVersion = "日めくりの数え番号：" + ver;
 
+                // 安定ソート
                 var versioner = new[]
                 {
                     new {Version = himekuriShaperVersion}
