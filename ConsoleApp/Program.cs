@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ConsoleApp.ConsoleApp
+namespace ConsoleApp
 {
     public class Himekuri
     {
