@@ -32,12 +32,12 @@ namespace ConsoleApp
                 // 安定ソート
                 var takoage = new[]
                 {
-                    new {Name = oshogatsu},
-                    new {Name = hagoita},
-                    new {Name = nengo}
+                    oshogatsu,
+                    hagoita,
+                    nengo
                 };
 
-                var orderByList = takoage.OrderBy(x => x.Name);
+                var orderByList = takoage.OrderBy(x => x);
                 foreach (var x in orderByList )
                 {
                     Console.WriteLine(x);
@@ -59,10 +59,10 @@ namespace ConsoleApp
                 // 安定ソート
                 var versioner = new[]
                 {
-                    new {Version = himekuriShaperVersion}
+                    himekuriShaperVersion
                 };
 
-                var orderList = versioner.OrderBy(y => y.Version);
+                var orderList = versioner.OrderBy(y => y);
 
                 foreach (var y in orderList)
                 
