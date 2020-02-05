@@ -52,24 +52,31 @@ namespace ConsoleApp
             }
             finally
             {
-                // 宣言
-                const string ver = "1.0.1";
-                const string himekuriShaperVersion = "日めくりの数え番号：" + ver;
-
-                // 安定ソート
-                var versioner = new[]
+                try
                 {
-                    himekuriShaperVersion
-                };
+                    // 宣言
+                    const string ver = "1.0.1";
+                    const string himekuriShaperVersion = "日めくりの数え番号：" + ver;
 
-                var orderList = versioner.OrderBy(y => y);
+                    // 安定ソート
+                    var versioner = new[]
+                    {
+                        himekuriShaperVersion
+                    };
 
-                foreach (var y in orderList)
-                
-                {
-                    Console.WriteLine(y);
+                    var orderList = versioner.OrderBy(y => y);
+
+                    foreach (var y in orderList)
+                    {
+                        Console.WriteLine(y);
+                        Console.ReadKey();
+                    }
                 }
-
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex);
+                    Console.ReadKey();
+                }
             }
         }
     }
