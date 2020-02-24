@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Diagnostics;
 
 namespace ConsoleApp
 {
@@ -10,7 +11,7 @@ namespace ConsoleApp
             try
             {
                 // 宣言
-                var dt = DateTime.Now;
+                var dt = DateTime.Now;           
                 const string str = "令和";
                 const string str2 = "R0";
 
@@ -47,8 +48,7 @@ namespace ConsoleApp
             catch (Exception e)
             {
                 // 出力
-                Console.WriteLine("Log : " + e);
-                Console.ReadKey();
+                Trace.WriteLine(e.Message);
             }
             finally
             {
@@ -74,8 +74,7 @@ namespace ConsoleApp
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine(ex);
-                    Console.ReadKey();
+                    Trace.WriteLine(ex.Message);
                 }
             }
         }
