@@ -25,7 +25,7 @@ namespace ConsoleApp
 
                 // 参照先
                 var nengo = (dt.Year + "年" + dt.Month + "月" + dt.Day + "日" + " : " + dt.Hour + "時" + dt.Minute + "分" +
-                             dt.Second + "秒");
+                             dt.Second + "秒" + " : " + dt.ToString("dddd"));
                 var hagoita = reiwa + " : " + reiwa2;
                 var oshogatsu = "来年の1月1日まであと：" + (gantan - 1) + "日です。";
 
