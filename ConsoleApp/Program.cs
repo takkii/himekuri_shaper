@@ -6,7 +6,7 @@ namespace ConsoleApp
 {
     public static class Himekuri
     {
-        public static void Main(string[] args)
+        public static void Main()
         {
             try
             {
