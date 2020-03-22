@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Diagnostics;
 
 namespace ConsoleApp
 {
@@ -10,7 +11,7 @@ namespace ConsoleApp
             try
             {
                 // 宣言
-                var dt = DateTime.Now;
+                var dt = DateTime.Now;           
                 const string str = "令和";
                 const string str2 = "R0";
 
@@ -25,7 +26,7 @@ namespace ConsoleApp
 
                 // 参照先
                 var nengo = (dt.Year + "年" + dt.Month + "月" + dt.Day + "日" + " : " + dt.Hour + "時" + dt.Minute + "分" +
-                             dt.Second + "秒");
+                             dt.Second + "秒" + " : " + dt.ToString("dddd"));
                 var hagoita = reiwa + " : " + reiwa2;
                 var oshogatsu = "来年の1月1日まであと：" + (gantan - 1) + "日です。";
 
@@ -47,8 +48,7 @@ namespace ConsoleApp
             catch (Exception e)
             {
                 // 出力
-                Console.WriteLine("Log : " + e);
-                Console.ReadKey();
+                Trace.WriteLine(e.Message);
             }
             finally
             {
@@ -74,8 +74,7 @@ namespace ConsoleApp
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine(ex);
-                    Console.ReadKey();
+                    Trace.WriteLine(ex.Message);
                 }
             }
         }
