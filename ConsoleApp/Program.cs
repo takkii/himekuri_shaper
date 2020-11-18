@@ -19,7 +19,7 @@ namespace ConsoleApp
                 const string Onedays = "日";
                 const string OneHour = "時";
                 const string OneMinutes = "分";
-                const string Oneseconds = "秒";
+                // const string Oneseconds = "秒";
                 const string comma = ".";
                 const string koron = " : ";
                 const string next_year = "来年の1月1日まであと：";
@@ -65,13 +65,14 @@ namespace ConsoleApp
                 try
                 {
                     // 宣言
-                    const string ver = "1.0.2";
-                    const string himekuriShaperVersion = "日めくりの数え番号：" + ver;
+                    const string himekuriversion = "1.0.2";
+                    const string himekuriSharper = "日めくりの数え番号：";
+                    const string vesion = himekuriSharper + himekuriversion;
 
                     // 安定ソート
                     var versioner = new[]
                     {
-                        himekuriShaperVersion
+                        vesion
                     };
 
                     var orderList = versioner.OrderBy(y => y);
